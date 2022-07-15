@@ -24,13 +24,13 @@
                         <div class="upload-profile-image d-flex justify-content-center pb-5">
                             <div class="text-center ">
 
-                                <input type="file" class="form-control-file" name="profileupload" id="upload-profile" accept="png/*, jpg/*">
+                                <input type="file" class="img rounded-circle" name="profileupload" id="upload-profile" accept="png/*, jpg/*">
                                 <img src="../images/image-avatar.png" class="img rounded-circle" alt="default photo" width="100px">
                                 <small class="form-text text-black-50">Choose Image</small>
 
                             </div>
                         </div>
-
+                        <span id="demo"></span>
                         <div class="wrap-input100 validate-input ">
                             <span class="label-input100">First name</span>
                             <input class="input100" type="text" name="firstname" maxlength="10" autofocus="autofocus" required="required">
@@ -44,6 +44,12 @@
                         </div>
 
                         <div class="wrap-input100 validate-input ">
+                            <span class="label-input100">Phone Number</span>
+                            <input class="input100" type="text" name="phone" maxlength="10" required="required">
+                            <span class="focus-input100" data-symbol="&#xf206;"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input ">
                             <span class="label-input100">Email</span>
                             <input class="input100" type="text" name="email" maxlength="30" required="required">
                             <span class="focus-input100" data-symbol="&#xf206;"></span>
@@ -51,7 +57,7 @@
 
                         <div class="wrap-input100 validate-input ">
                             <span class="label-input100">Password</span>
-                            <input class="input100" type="password" name="password" maxlength="15" required="required">
+                            <input class="input100" type="password" name="password" minlength="7" maxlength="20" required="required">
                             <span class="focus-input100" data-symbol="&#xf206;"></span>
                         </div>
 
@@ -87,18 +93,6 @@
     </footer>
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script>
-        function letter(inputtext) {
-            var characters = /^[A-Za-z]+$/;
-            if (inputtext.value.match(characters)) {
-                alert('name accepted');
-                return true;
-            } else {
-                alert('Only letters alowed');
-                return false;
-            }
-        }
-    </script>
 </body>
 
 </html>

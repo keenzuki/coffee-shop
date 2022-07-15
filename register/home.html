@@ -62,9 +62,20 @@
     <!-- Page Header -->
     <header class="header">
         <div class="overlay">
-
+            <svg height="210" width="500">
+                <polygon points="240,10 180,198 330,78 150,78 300,198" style="fill:rgb(81, 14, 60);stroke:rgba(176, 117, 8, 0.786);stroke-width:5;fill-rule:evenodd;"/>
+                <animateTransform 
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="rotate"
+                    from="0 "
+                    to="360 "
+                    begin="0s"
+                    dur="5s"
+                    repeatCount="indefinite"/> 
+            </svg>
+            <h1 class="title">Down Town</h1>
             <h1 class="subtitle">Welcome To Our Restaurant</h1>
-            <h1 class="title">DownTown Hotel</h1>
             <a class="btn btn-primary mt-3" href="#book-table">Book A Table</a>
             <br>
 
@@ -358,7 +369,7 @@
     <!-- End of Team Section -->
 
     <!-- Testmonial Section -->
-    <section id="testmonial " class="pattern-style-3 ">
+    <section id="testmonial" class="pattern-style-3 ">
         <div class="container ">
             <h6 class="section-subtitle text-center ">Best Clients</h6>
             <h3 class="section-title mb-5 text-center ">Testmonials</h3>
@@ -420,42 +431,45 @@
                     <img src="../assets/imgs/contact.jpg" alt="a photo" class="w-100 rounded shadow">
                 </div>
                 <div class="col-md-6">
-                    <form>
+                    <form action="../reservations/reservation.php" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Name">
+                            <span>Email</span>
+                            <input type="text" class="form-control" name="email" placeholder="Please enter your registered email">
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" name="phone" placeholder="Your Phone">
-                        </div>
-                        <div class="form-group">
+                            <span>Date and Time</span>
                             <input type="datetime-local" class="form-control" name="date">
                         </div>
                         <div class="form-group">
-                            <input type="number" class="form-control" name="seats" placeholder="Seats">
+                            <span>Seats</span>
+                            <input type="number" class="form-control" name="seat" min="1" max="50" placeholder="Seats">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Book A Table</button>
+                        <button name="book" class="btn btn-primary btn-block">Book A Table</button>
                         <small class="form-text text-muted mt-3">We don't span customers. Check our <a href="#">Privacy Policy</a></small>
                     </form>
                 </div>
-                <div class="mapouter">
-                    <div class="gmap_canvas"><iframe width="600" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=egerton%20university%20njoro&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net">fmovies</a><br>
-                        <style>
-                            .mapouter {
-                                position: relative;
-                                text-align: right;
-                                height: 200px;
-                                width: 600px;
-                            }
-                        </style>
-                        <a href="https://www.embedgooglemap.net"></a>
-                        <style>
-                            .gmap_canvas {
-                                overflow: hidden;
-                                background: none!important;
-                                height: 200px;
-                                width: 600px;
-                            }
-                        </style>
+                <div class="col-md-6 col-md-8 col-md-10 col-md-4">
+                    <div class="mapouter">
+                        <br>
+                        <div class="gmap_canvas"><iframe width="500" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=egerton%20university%20njoro&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 200px;
+                                    width: auto;
+                                }
+                            </style>
+                            <a href="https://www.embedgooglemap.net"></a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none!important;
+                                    height: 200px;
+                                    width: auto;
+                                }
+                            </style>
+                        </div>
                     </div>
                 </div>
             </div>
